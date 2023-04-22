@@ -1,0 +1,28 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:active {
+  color: darkgray;
+}
+
+.navigation-items {
+  list-style: none;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.navigation-div {
+  background-color: gray;
+  text-align: left;
+}
+
+.title {
+  align-items: center;
+  text-align: left;
+  display: flex;
+  margin-right: 30px;
+  margin-left: 10px;
+  font-size: 20px;
+}
