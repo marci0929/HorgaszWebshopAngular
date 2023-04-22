@@ -17,11 +17,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MenuComponent } from './shared/menu/menu.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
+export const firebaseConfig = {
+  // apiKey: '',
+  // authDomain: '',
+  // databaseURL: '',
+  // storageBucket: '',
+  // messagingSenderId: ''
+};
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +47,10 @@ import { MenuComponent } from './shared/menu/menu.component';
     MatIconModule,
     FlexLayoutModule,
     MatListModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@ import { Component, OnInit, AfterViewInit, EventEmitter, Output, Input  } from '
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent  implements OnInit, AfterViewInit {
+export class MenuComponent {
 
   @Input() currentPage: string = '';
   @Output() selectedPage: EventEmitter<string> = new EventEmitter();
@@ -13,15 +13,6 @@ export class MenuComponent  implements OnInit, AfterViewInit {
   @Output() onLogout: EventEmitter<boolean> = new EventEmitter();
 
   constructor() {
-    console.log('constructor called.');
-  }
-
-  ngOnInit(): void {
-    console.log('ngOnInit called.');
-  }
-
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit called.');
   }
 
   menuSwitch() {

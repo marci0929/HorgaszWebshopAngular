@@ -1,0 +1,13 @@
+<div class="main_component">
+  <h1>Jelentkezz be</h1>
+  <mat-form-field>
+      <mat-label for="username">Email: </mat-label><input title="username" matInput type="text" [formControl]="username" />
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label for="password">Password: </mat-label><input title="password" matInput type="password" [formControl]="password" />
+  </mat-form-field>
+  <span>
+      <span><button mat-raised-button color="primary" (click)="login()">Login</button></span>
+      <span><button mat-raised-button color="primary" [routerLink]="'/signup'">Sign Up</button></span>
+  </span>
+</div>

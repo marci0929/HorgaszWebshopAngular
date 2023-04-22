@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { Item } from './shared/models/Item';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
   title = "horgasz_webshop"
   page = '';
   routes: Array<string> = [];
+  cart: Array<Item> = []
 
   constructor(private router: Router) {
   }
