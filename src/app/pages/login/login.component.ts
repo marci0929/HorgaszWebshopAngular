@@ -13,13 +13,13 @@ import { Md5 } from 'ts-md5';
 })
 export class LoginComponent {
 
-  username = new FormControl('');
+  email = new FormControl('');
   password = new FormControl('');
 
   constructor(private router: Router, private authService: AuthService) { }
 
     async login() {
-      this.authService.login(this.username.value as string, Md5.hashStr(this.password.value as string)).then(cred => {
+      this.authService.login(this.email.value as string, Md5.hashStr(this.password.value as string)).then(cred => {
         console.log(cred);
         this.router.navigateByUrl('/main_page');
       }).catch(error => {

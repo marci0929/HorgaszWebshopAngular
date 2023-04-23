@@ -1,4 +1,4 @@
-.div-flex {
+.main-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,23 +6,17 @@
   height: 100%;
 }
 
-.main_component {
-  height: 100vh;
-}
-
-form div {
-  padding: 5px 5px 5px 5px;
-}
-
 form {
   display: inline-grid;
   width: 50%;
   align-self: center;
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 10px;
+  padding: 5px;
 }
 
-.subForm {
-  width: 100%;
-  display: inline-grid;
+input {
+  margin-top: 25px;
 }
 
 .buttons {

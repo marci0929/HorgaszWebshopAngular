@@ -31,8 +31,17 @@ const routes: Routes = [
     loadChildren: () => import('./pages/feedback/feedback.module').then(m => m.FeedbackModule)
   },
   {
+    path: 'logout',
+    loadChildren: () => import('./pages/logout/logout.module').then(m => m.LogoutModule)
+  },
+  {
     path: 'not-found',
     loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
+  },
+  {
+    path: '',
+    redirectTo: '/main_page',
+    pathMatch: 'full'
   },
   {
     path: '**',

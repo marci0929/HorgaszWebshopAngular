@@ -16,8 +16,9 @@
           <li><a routerLink="/cart">Cart</a></li>
           <li><a routerLink="/contact">Contact</a></li>
           <li><a routerLink="/webshop">Webshop</a></li>
-          <li><a routerLink="/login">Login</a></li>
-          <li><a routerLink="/signup">Sign up</a></li>
+          <li *ngIf="!(loggedInUser)"><a routerLink="/signup">Sign up</a></li>
+          <li *ngIf="!(loggedInUser)"><a routerLink="/login">Login</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/logout">Logout</a></li>
           <li><a routerLink="/feedback">Feedback</a></li>
         </ul>
       </div>

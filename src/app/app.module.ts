@@ -18,17 +18,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MenuComponent } from './shared/menu/menu.component';
 import { AngularFireModule } from '@angular/fire/compat';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideStorage,getStorage } from '@angular/fire/storage';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-
-export const firebaseConfig = {
-  // apiKey: '',
-  // authDomain: '',
-  // databaseURL: '',
-  // storageBucket: '',
-  // messagingSenderId: ''
-};
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -47,10 +42,12 @@ export const firebaseConfig = {
     MatIconModule,
     FlexLayoutModule,
     MatListModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase())
   ],
   providers: [],
   bootstrap: [AppComponent]

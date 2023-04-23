@@ -24,17 +24,18 @@ export class SignupComponent {
 
     onSubmit() {
         console.log(this.signUpForm.value);
-        this.authService.signup(this.signUpForm.get('username')?.value as string, Md5.hashStr(this.signUpForm.get('password')?.value as string)).then(cred => {
+        this.authService.signup(this.signUpForm.get('email')?.value as string, Md5.hashStr(this.signUpForm.get('password')?.value as string)).then(cred => {
           console.log(cred);
           const user: User = {
             id: cred.user?.uid as string,
             email: this.signUpForm.get('email')?.value as string,
             username: this.signUpForm.get('username')?.value as string,
-            password: this.signUpForm.get('username')?.value as string
+            password: this.signUpForm.get('password')?.value as string
           };
           this.userService.create(user).then(_ => {
-            console.log('User added successfully.');
+            console.log('Felhasználó sikeresen hozzáadva');
           }).catch(error => {
+            console.log("itt van a szar")
             console.error(error);
           })
         }).catch(error => {

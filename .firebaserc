@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "horgaszwebshopangular": {
+      "hosting": {
+        "horgasz_webshop": [
+          "horgaszwebshopangular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "horgaszwebshopangular"
+  }
+}
