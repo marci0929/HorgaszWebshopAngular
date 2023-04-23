@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
+import { Observable, Subscription, filter } from 'rxjs';
 import { Item } from './shared/models/Item';
 import { AuthService } from './shared/services/auth.service';
 
@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   title = "horgasz_webshop"
   page = '';
   routes: Array<string> = [];
-  cart: Array<Item> = []
   loggedInUser?: firebase.default.User | null;
 
   constructor(private router: Router, private authService: AuthService) {

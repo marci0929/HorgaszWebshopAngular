@@ -1,3 +1,15 @@
 <div class="webshop-base">
-
+    <h1>Tessék szépen nézelődni</h1>
+    <table>
+        <th>Termékek</th>
+        <tr *ngFor="let item of webshopItems">
+            <td>
+                <div class="item_name">{{item.item_name}}</div>
+                <div class="image"><img src="assets/{{item.id}}" title={{item.id}} alt={{item.id}} width="70%"></div>
+                <div class="description">{{item.description}}</div>
+                <div class="price">{{item.price}} Ft</div>
+                <button (click)="buy(item)" class="buy">Megveszem!</button>
+            </td>
+        </tr>
+    </table>
 </div>

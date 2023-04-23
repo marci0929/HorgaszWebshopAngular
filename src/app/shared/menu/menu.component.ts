@@ -9,8 +9,6 @@ export class MenuComponent {
 
   @Input() currentPage: string = '';
   @Output() selectedPage: EventEmitter<string> = new EventEmitter();
-  @Output() onCloseSidenav: EventEmitter<boolean> = new EventEmitter();
-  @Output() onLogout: EventEmitter<boolean> = new EventEmitter();
 
   constructor() {
   }

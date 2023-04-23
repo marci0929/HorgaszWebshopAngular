@@ -1,0 +1,80 @@
+[
+    {
+        "id": "boat1.jpg",
+        "item_name": "Halászhajó (menő)",
+        "description": "Ezzel a kivételesen menő ladikkal meghódíthatod a leghuncutabb óceánok vizeit is, és kifoghatod a legvadabb ragadozókat. A tengeri sünöket azért kerüld.",
+        "price": "700000"
+    },
+    {
+        "id": "boat2.jpg",
+        "item_name": "Halász tank",
+        "description": "Ha olyan ragadozókra vadászol, amikhez nem elég egy egyszerű csónak, akkor ez kell neked. A halásztank látványától szinte már magukat fogják ki a vízi élőlények. Hihetetlen teljesítményű lövege még akár a legnagyobb bálnákkal is elbánik.",
+        "price": "6870000"
+    },
+    {
+        "id": "chair.jpg",
+        "item_name": "Halász trón",
+        "description": "Ha eleged van abból, hogy a halszagú tó mellett nem látszik burzsoá éned, és az alfeled már megelégelte a vászon széken ülést, akkor szerezd be ezt az igazán kivételes széket, amiben élmény a horgászat.",
+        "price": "70000000"
+    },
+    {
+        "id": "csali1.jpg",
+        "item_name": "Csali (nem túl menő)",
+        "description": "Ez egy csali, magyarázzam még?",
+        "price": "2000"
+    },
+    {
+        "id": "csali2.jpg",
+        "item_name": "Csali (ez se túl menő)",
+        "description": "Ugynazt tudja, mint a másik kicsit sem menő csali.",
+        "price": "1500"
+    },
+    {
+        "id": "csali3.jpg",
+        "item_name": "Gigantikus kukac",
+        "description": "Ezeket a kukacokat szteroidokkal, nagy mennyiségű proteinbevitel mellett nevelik. Eddig a legnagyobb példány Zsóka egyszer kinyomott 250 Kg-t csúszva, hát most mondd meg. Ha ezzel halászol, lehet hogy a csalid megfojtja a kifogni kívánt halat, majd megeszi.",
+        "price": "90000"
+    },
+    {
+        "id": "csali4.jpg",
+        "item_name": "Sör csali",
+        "description": "Alkesz halakhoz kiváló választás. Hidd el, akadnak bőven.",
+        "price": "3000"
+    },
+    {
+        "id": "csali5.jpg",
+        "item_name": "**** csali",
+        "description": "Ez az ami. Kiváló fogóképesség, hatalmas méret, remek személyiség. Nem csak halra jó.",
+        "price": "3500"
+    },
+    {
+        "id": "fish1.jpg",
+        "item_name": "Hal",
+        "description": "Ha gyökér vagy a horgászathoz, de nem akarod, hogy az asszony otthon ezt észrevegye, vegyél ilyen halat, és mondd azt hogy te fogtad. Kérés szerint csalit is elrejtünk benne.",
+        "price": "4000"
+    },
+    {
+        "id": "fish2.jpg",
+        "item_name": "Hal ízes",
+        "description": "Ugynaz mint a másik hal, csak epresben.",
+        "price": "4500"
+    },
+    {
+        "id": "horgaszbot1.jpg",
+        "item_name": "Horgászbot 1",
+        "description": "Lehet. Vele. Fogni. Halat. Is.",
+        "price": "56000"
+    },
+    {
+        "id": "horgaszbot2.jpg",
+        "item_name": "Bot 2",
+        "description": "Lehet. Vele. Fogni. Halat. Ezzel. Is.",
+        "price": "70005"
+    },
+    {
+        "id": "horgaszbot3.jpeg",
+        "item_name": "Bot 2",
+        "description": "Gondolom ez is valami horgász kellék, bocs nem vagyok építészmérnök.",
+        "price": "35"
+    }
+]
