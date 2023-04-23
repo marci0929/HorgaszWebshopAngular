@@ -4,22 +4,21 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-left" fxHide.xs class="navigation-div">
+      <div fxFlex fxLayout fxLayoutAlign="flex-left" class="navigation-div">
         <div class="title">Horgász webshop</div>
         <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-          <li><a routerLink="/main_page">Main page</a></li>
-          <li><a routerLink="/cart">Cart</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-          <li><a routerLink="/webshop">Webshop</a></li>
-          <li *ngIf="!(loggedInUser)"><a routerLink="/signup">Sign up</a></li>
-          <li *ngIf="!(loggedInUser)"><a routerLink="/login">Login</a></li>
-          <li *ngIf="loggedInUser"><a routerLink="/logout">Logout</a></li>
-          <li><a routerLink="/feedback">Feedback</a></li>
+          <li><a routerLink="/main_page">Főoldal</a></li>
+          <li><a routerLink="/cart">Kosár</a></li>
+          <li><a routerLink="/contact">Elérhetőségek</a></li>
+          <li style="background-color: lightgreen"><a routerLink="/webshop">WEBSHOP</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/feedback">Visszajelzés</a></li>
+        </ul>
+      </div>
+      <div class="user-handling-div">
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+          <li *ngIf="!(loggedInUser)"><a routerLink="/signup">Regisztráció</a></li>
+          <li *ngIf="!(loggedInUser)"><a routerLink="/login">Bejelentkezés</a></li>
+          <li *ngIf="loggedInUser"><a routerLink="/logout">Kijelentkezés</a></li>
         </ul>
       </div>
     </mat-toolbar>
