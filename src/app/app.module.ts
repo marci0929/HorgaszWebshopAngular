@@ -22,11 +22,13 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
+import { FeedbackPipe } from './shared/pipes/feedback.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    FeedbackPipe,
   ],
   imports: [
     BrowserModule,

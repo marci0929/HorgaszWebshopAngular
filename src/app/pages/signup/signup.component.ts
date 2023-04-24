@@ -5,6 +5,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { Location } from '@angular/common';
 import { Md5 } from 'ts-md5';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-signup',
@@ -20,7 +21,7 @@ export class SignupComponent {
         rePassword: new FormControl(''),
     });
 
-    constructor(private location: Location, private authService: AuthService, private userService: UserService) { }
+    constructor(private location: Location, private authService: AuthService, private userService: UserService, private router: Router) { }
 
     onSubmit() {
         console.log(this.signUpForm.value);
@@ -33,9 +34,8 @@ export class SignupComponent {
             password: this.signUpForm.get('password')?.value as string
           };
           this.userService.create(user).then(_ => {
-            console.log('Felhasználó sikeresen hozzáadva');
+            this.router.navigateByUrl("/main_page");
           }).catch(error => {
-            console.log("itt van a szar")
             console.error(error);
           })
         }).catch(error => {

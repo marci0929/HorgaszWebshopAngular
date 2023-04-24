@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './shared/services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
   {
     path: 'webshop',
     loadChildren: () => import('./pages/webshop/webshop.module').then(m => m.WebshopModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'contact',
@@ -24,7 +26,8 @@ const routes: Routes = [
   },
   {
     path: 'feedback',
-    loadChildren: () => import('./pages/feedback/feedback.module').then(m => m.FeedbackModule)
+    loadChildren: () => import('./pages/feedback/feedback.module').then(m => m.FeedbackModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'logout',

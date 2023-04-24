@@ -1,1 +1,59 @@
-<p>feedback works!</p>
+<div class="main-div">
+  <h2>Itten tudsz visszajelzést írni a weboldalról, termékekről, kutyusod új rágócsontjáról, vagy a szomszéd csajról
+  </h2>
+  <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
+    <div>
+      <mat-form-field class="input-field">
+        <mat-label for="name">Megjelenő név: </mat-label>
+        <input matInput type="text" title="name" formControlName="name" />
+      </mat-form-field>
+    </div>
+    <br>
+    <div>
+      <mat-form-field class="input-field">
+        <mat-label for="menoseg">Milyen menő ez a komment?: </mat-label>
+        <input matInput type="number" title="menoseg" formControlName="menoseg" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="input-field">
+        <mat-label for="text">Visszajelzés: </mat-label>
+        <textarea matInput rows="5" cols="60" title="text" formControlName="text"></textarea>
+      </mat-form-field>
+    </div>
+    <br>
+    <div>
+      <button mat-raised-button color="primary" type="submit">Visszajelzés elküldése</button>
+    </div>
+  </form>
+  <div>Eddigi legmenőbb 10 visszajelzés: </div>
+  <div>
+    <table class="feedbacks" >
+      <tr>
+        <th>Név</th>
+        <th>Menőség</th>
+        <th>Visszajelzés</th>
+      </tr>
+      <tr *ngFor="let feedback of topFeedbacks">
+        <td>{{feedback.name}}</td>
+        <td>{{feedback.menoseg}}</td>
+        <td>{{feedback.text}}</td>
+      </tr>
+    </table>
+  </div>
+  <div>Eddigi visszajelzések: </div>
+  <div>
+    <table class="feedbacks" >
+      <tr>
+        <th>Név</th>
+        <th>Menőség</th>
+        <th>Visszajelzés</th>
+      </tr>
+      <tr *ngFor="let feedback of feedbacks">
+        <td>{{feedback.name}}</td>
+        <td>{{feedback.menoseg}}</td>
+        <td>{{feedback.text}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
